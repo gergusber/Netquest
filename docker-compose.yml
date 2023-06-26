@@ -1,0 +1,33 @@
+version: "3"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+    networks:
+      - app-network
+
+  db:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - app-network
+    environment:
+        MONGO_INITDB_ROOT_USERNAME: gerbertea
+        MONGO_INITDB_ROOT_PASSWORD: gerberteasecret
+
+networks:
+  app-network:
+
+volumes:
+  mongodb_data:

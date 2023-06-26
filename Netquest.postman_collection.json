@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "0b2d511c-348e-4104-86d0-f7eb1bcb6952",
+		"name": "Netquest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"hola mundo2\",\n    \"img\": \"https://hatrabbits.com/wp-content/uploads/2017/01/random-word-1.jpg\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/feed/post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"feed",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/feed/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"feed",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get single post",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/feed/post/:postId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"feed",
+						"post",
+						":postId"
+					],
+					"variable": [
+						{
+							"key": "postId",
+							"value": "6499dd621fcc3901d63fd3c5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete single post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/feed/post/:postId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"feed",
+						"post",
+						":postId"
+					],
+					"variable": [
+						{
+							"key": "postId",
+							"value": "6499dd621fcc3901d63fd3c5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put post",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"hola mundo 3\",\n    \"img\": \"https://hatrabbits.com/wp-content/uploads/2017/01/random-word-1.jpg\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/feed/post/:postId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"feed",
+						"post",
+						":postId"
+					],
+					"variable": [
+						{
+							"key": "postId",
+							"value": "6499dd621fcc3901d63fd3c5"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
